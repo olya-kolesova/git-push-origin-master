@@ -1,10 +1,16 @@
-<h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
-<% if @task.completed == true %>
-<%= fa_icon "check-square" %>
-<% else %>
-<%= fa_icon "square" %>
-<% end %>
-<p><%= @task.completed %></p>
+<div class="mx-30">
 
-<%= link_to 'Back', tasks_path %>
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+  <% if @task.completed == true %>
+  <%= fa_icon "check-square" %>
+  <% else %>
+  <%= fa_icon "square" %>
+  <% end %>
+  <h5><%= link_to 'Edit this task', task_path(@task) %></h5>
+
+  <div class='btn btn-outline-primary'>
+    <%= link_to 'Back', tasks_path %>
+  </div>
+
+</div>
