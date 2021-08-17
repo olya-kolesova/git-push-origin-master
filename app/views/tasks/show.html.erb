@@ -1,5 +1,10 @@
 <h2><%= @task.title %></h2>
 <p><%= @task.details %></p>
+<% if @task.completed == true %>
+<%= fa_icon "check-square" %>
+<% else %>
+<%= fa_icon "square" %>
+<% end %>
 <p><%= @task.completed %></p>
 
 <%= link_to 'Back', tasks_path %>
